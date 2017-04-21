@@ -1,0 +1,27 @@
+﻿<link href="~/Content/bootstrap.css" rel="stylesheet" />
+@model BirthdayCard.Models.BirthdayCard
+
+<style>
+    body {
+        background-color: #ed5761;
+    }
+    p{
+        font-size:xx-large;
+    }
+</style>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Birthday Card Sent</title>
+</head>
+<body>
+    <div class="text-center">
+        <p>From: @Html.DisplayTextFor(t => t.FromName)</p>
+        <p>To: @Html.DisplayTextFor(t => t.ToName)</p>
+        <p>Message: @Html.DisplayTextFor(t => t.Message)</p>
+    </div>
+</body>
+</html>

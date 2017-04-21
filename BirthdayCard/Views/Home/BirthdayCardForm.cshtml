@@ -1,0 +1,35 @@
+﻿<link href="~/Content/bootstrap.css" rel="stylesheet" />
+@model BirthdayCard.Models.BirthdayCard
+
+@{ 
+    ViewBag.Title = "Birthday Card";
+}
+
+<style>
+
+    body {
+        background-color: #37a011;
+    }
+    
+    
+</style>
+
+<!DOCTYPE html>
+<head>
+    <title>Birthday Card</title>
+</head>
+
+@using (Html.BeginForm())
+{   
+    <div class="text-center">
+        @Html.ValidationSummary()
+
+        <p>From: @Html.TextBoxFor(t => t.FromName)</p>
+        <p>To: @Html.TextBoxFor(t => t.ToName)</p>
+        <p>Message: @Html.TextBoxFor(t => t.Message)</p>
+        <input type="submit" value="Send Card" />
+
+
+    </div>
+    
+}
