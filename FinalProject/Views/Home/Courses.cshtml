@@ -1,0 +1,23 @@
+﻿@model FinalProject.Class[]
+
+
+@{
+    ViewBag.Title = "Courses";
+}
+
+@if (Model.Length > 0)
+{
+    <table>
+        @foreach (var course in Model)
+        {
+            <tr>
+                <td>@course.ClassName</td>
+                <td>@course.ClassPrice</td>
+            </tr>
+        }
+    </table>
+}
+else
+{
+    <h2>No course data found.</h2>
+}

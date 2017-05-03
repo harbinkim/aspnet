@@ -64,6 +64,10 @@ C:\Source\web-applications\FinalProject\bin\Microsoft.Owin.Security.OAuth.xml
 C:\Source\web-applications\FinalProject\bin\Microsoft.Owin.Security.Google.xml
 C:\Source\web-applications\FinalProject\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Source\web-applications\FinalProject\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Source\web-applications\FinalProject\obj\Debug\FinalProject.csprojResolveAssemblyReference.cache
 C:\Source\web-applications\FinalProject\obj\Debug\FinalProject.dll
 C:\Source\web-applications\FinalProject\obj\Debug\FinalProject.pdb
+C:\Source\web-applications\FinalProject\bin\Autofac.dll
+C:\Source\web-applications\FinalProject\bin\Autofac.Integration.Mvc.dll
+C:\Source\web-applications\FinalProject\bin\Autofac.xml
+C:\Source\web-applications\FinalProject\bin\Autofac.Integration.Mvc.xml
+C:\Source\web-applications\FinalProject\obj\Debug\FinalProject.csprojResolveAssemblyReference.cache
