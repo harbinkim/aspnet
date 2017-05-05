@@ -31,8 +31,12 @@
       <End Role="Class" EntitySet="Classes" />
       <End Role="User" EntitySet="Users" />
     </AssociationSet>
-    <FunctionImport Name="RetrieveClassesForStudent">
+    <FunctionImport Name="RetrieveClassesForStudent" ReturnType="Collection(SchoolModel.StudentClass)">
       <Parameter Name="UserId" Mode="In" Type="Int32" />
     </FunctionImport>
   </EntityContainer>
+  <ComplexType Name="StudentClass">
+    <Property Type="Int32" Name="ClassId" Nullable="false" />
+    <Property Type="Int32" Name="UserId" Nullable="false" />
+  </ComplexType>
 </Schema>

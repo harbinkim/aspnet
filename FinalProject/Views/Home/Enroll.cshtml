@@ -1,0 +1,39 @@
+﻿@model FinalProject.Models.EnrollModel
+
+@{
+    ViewBag.Title = "Enroll";
+}
+
+@{
+    List<SelectListItem> dropDownList = new List<SelectListItem>();
+    bool IsSelected = false;
+    foreach (var item in Model.Classes)
+    {
+        dropDownList.Add(new SelectListItem
+        {
+            Text = item.ClassName,
+            Value = item.ClassId.ToString(),
+            Selected = IsSelected
+        });
+    }
+}
+<header style="font-size:xx-large">
+    Enroll
+</header>
+
+@using (Html.BeginForm("Enroll", "Home", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+{
+    <header>Enroll In Class</header>
+    <body>
+        <table>
+            <tr>
+                <td>
+                    @Html.DropDownList("DropDown", dropDownList)
+                </td>
+                <td>
+                    <input type="submit" class="btn btn-default" value="Add Class" />
+                </td>
+            </tr>
+        </table>
+    </body>
+}

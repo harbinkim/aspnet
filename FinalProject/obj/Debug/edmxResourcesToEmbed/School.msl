@@ -29,6 +29,13 @@
         <ScalarProperty Name="UserId" ColumnName="UserId" />
       </EndProperty>
     </AssociationSetMapping>
-    <FunctionImportMapping FunctionImportName="RetrieveClassesForStudent" FunctionName="SchoolModel.Store.RetrieveClassesForStudent" />
+    <FunctionImportMapping FunctionImportName="RetrieveClassesForStudent" FunctionName="SchoolModel.Store.RetrieveClassesForStudent">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="SchoolModel.StudentClass">
+          <ScalarProperty Name="ClassId" ColumnName="ClassId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
   </EntityContainerMapping>
 </Mapping>

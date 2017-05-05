@@ -4,14 +4,24 @@
     ViewBag.Title = "Courses";
 }
 
-@if (!(Model==null) && Model.Length > 0)
+<header style="font-size:xx-large">
+    Student Courses
+</header>
+
+@if (!(Model == null) && Model.Length > 0)
 {
-    <table>
+    <table align="center" border="1" frame="void" rules="rows" width="100%">
+        <tr>
+            <td align="left" style="font-weight:bold">Name</td>
+            <td align="left" style="font-weight:bold">Description</td>
+            <td align="left" style="font-weight:bold">Price</td>
+        </tr>
         @foreach (var course in Model)
         {
             <tr>
                 <td>@course.ClassName</td>
-                <td>@course.ClassPrice</td>
+                <td>@course.ClassDescription</td>
+                <td>@course.ClassPrice.ToString("F2")</td>
             </tr>
         }
     </table>

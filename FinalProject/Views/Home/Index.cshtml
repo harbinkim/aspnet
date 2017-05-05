@@ -22,14 +22,14 @@
                 <div class="col-md-4">
                     <h2>Your enrolled classes</h2>
                     <p>See the classes you are enrolled in.</p>
-                    @Html.ActionLink("Learn More", "UserCourses", "Home", new { @class = "btn btn-default" })
+                    @Html.ActionLink("Go", "UserCourses", "Home", new { @class = "btn btn-default" })
                 </div>
             </td>
             <td>
                 <div class="col-md-4">
                     <h2>Enroll in a class</h2>
                     <p>Take a new class.</p>
-                    
+                    @Html.ActionLink("Go", "Enroll", "Home", new { @class = "btn btn-default" })
                 </div>
             </td>
         </tr>

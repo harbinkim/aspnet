@@ -9,6 +9,7 @@ namespace FinalProject
     {
         UserModel LogIn(string email, string password);
         UserModel Register(string email, string password);
+        User GetUser(int userId);
     }
 
     public class UserModel
@@ -36,6 +37,16 @@ namespace FinalProject
             var user = DatabaseAccessor.Instance.Users.Add(new User { UserEmail = email, UserPassword = password });
             DatabaseAccessor.Instance.SaveChanges();
             return new UserModel { Id = user.UserId, Name = user.UserEmail };
+        }
+
+        public User GetUser(int userId)
+        {
+            var user = DatabaseAccessor.Instance.Users.First(u => u.UserId == userId);
+            if (user == null)
+            {
+                return null;
+            }
+            return user;
         }
     }
 }

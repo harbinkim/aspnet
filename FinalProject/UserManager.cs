@@ -9,6 +9,7 @@ namespace FinalProject
     {
         UserManagerModel LogIn(string email, string password);
         UserManagerModel Register(string email, string password);
+        User GetUser(int userId);
     }
     public class UserManagerModel
     {
@@ -47,6 +48,12 @@ namespace FinalProject
             }
 
             return new UserManagerModel { Id = user.Id, Name = user.Name };
+        }
+
+        public User GetUser(int userId)
+        {
+            return userRepository.GetUser(userId);
+
         }
     }
 }

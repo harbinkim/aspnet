@@ -30,13 +30,13 @@ namespace FinalProject
         public virtual DbSet<Class> Classes { get; set; }
         public virtual DbSet<User> Users { get; set; }
     
-        public virtual int RetrieveClassesForStudent(Nullable<int> userId)
+        public virtual ObjectResult<StudentClass> RetrieveClassesForStudent(Nullable<int> userId)
         {
             var userIdParameter = userId.HasValue ?
                 new ObjectParameter("UserId", userId) :
                 new ObjectParameter("UserId", typeof(int));
     
-            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("RetrieveClassesForStudent", userIdParameter);
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<StudentClass>("RetrieveClassesForStudent", userIdParameter);
         }
     }
 }
